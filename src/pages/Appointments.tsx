@@ -6,7 +6,7 @@ import { Plus, Search, Pencil, Trash2, X } from 'lucide-react';
 import { StatusBadge } from '@/components/StatusBadge';
 import { toast } from 'sonner';
 
-const emptyForm = { patient_id: '', doctor_id: '', date: '', time: '', reason: '', status: 'Scheduled' as const };
+const emptyForm = { patient_id: '', doctor_id: '', date: '', time: '', reason: '', status: 'Scheduled' as Appointment['status'] };
 
 export default function Appointments() {
   const { appointments, patients, doctors, addAppointment, updateAppointment, deleteAppointment, getPatient, getDoctor } = useHospital();
